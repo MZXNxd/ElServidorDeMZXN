@@ -1,26 +1,316 @@
-/* ... (resto del código) */
+/* Estilo general para toda la página */
+
+body, html {
+
+    margin: 0;
+
+    padding: 0;
+
+    height: 100%;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+
+/* Fondo de la página */
+
+body {
+
+    background-image: url('fondo.jpg'); /* Ruta de tu imagen de fondo */
+
+    background-size: cover; /* La imagen cubrirá todo el fondo */
+
+    background-position: center; /* Centra la imagen de fondo */
+
+    background-repeat: no-repeat; /* No repetir la imagen */
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh; /* La página ocupa toda la ventana */
+
+    text-align: center;
+
+    color: #fff;
+
+    position: relative;
+
+}
+
+
+
+body::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.5); /* Overlay oscuro para mejorar contraste */
+
+    z-index: -1; /* Asegura que el overlay no tape los elementos */
+
+}
+
+
+
+/* Contenedor principal */
+
+.container {
+
+    max-width: 600px; /* Ancho máximo de la página */
+
+    width: 100%;
+
+    color: #fff;
+
+    padding: 20px; /* Espacio interno del contenedor */
+
+    opacity: 0;
+
+    animation: fadeIn 1.5s forwards; /* Animación de desvanecimiento al cargar */
+
+    text-align: center; /* Alineación del contenido */
+
+}
+
+
+
+/* Animación de desvanecimiento */
+
+@keyframes fadeIn {
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
 
 /* Título principal */
+
 .main-title {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  color: #FFC0CB; /* Color rosa */
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 0 0 8px rgba(255, 192, 203, 0.8), 0 0 10px rgba(255, 192, 203, 0.8);
-  border: 2px solid #FFC0CB;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: rgba(0, 0, 0, 0.3);
+
+    font-size: 2.5em;
+
+    margin-bottom: 20px;
+
+    margin-top: 30px;
+
+    color: #FF6347; /* Color sólido para el texto */
+
+    letter-spacing: 2px; /* Espaciado entre letras */
+
+    text-transform: uppercase;
+
+    font-weight: bold;
+
+    text-shadow: 0 0 8px rgba(255, 99, 71, 0.8), 0 0 10px rgba(255, 99, 71, 0.8); /* Sombra luminosa */
+
+    border: 2px solid #FF6347; /* Borde que ilumina el título */
+
+    padding: 10px;
+
+    border-radius: 8px; /* Bordes redondeados */
+
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro detrás para mejor contraste */
+
 }
 
-/* Botón al hacer hover */
+
+
+/* Imagen de perfil */
+
+.profile-container {
+
+    margin-bottom: 20px;
+
+    position: relative;
+
+}
+
+
+
+.profile-img {
+
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 50%; /* Imagen circular */
+
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+
+    border: 5px solid rgb(112, 0, 0); /* Borde alrededor de la imagen */
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra sutil alrededor de la imagen */
+
+    transition: transform 0.3s ease; /* Animación de transformación */
+
+}
+
+
+
+.profile-img:hover {
+
+    transform: scale(1.05); /* Efecto de zoom suave al pasar el mouse */
+
+}
+
+
+
+.profile-container::after {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.3); /* Capa oscura encima de la imagen */
+
+    border-radius: 50%;
+
+    z-index: -1; /* Asegura que la capa no tape la imagen */
+
+}
+
+
+
+/* Contenedor de botones */
+
+.buttons-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+
+/* Estilo de los botones */
+
+.button {
+
+    display: inline-block;
+
+    padding: 15px;
+
+    background-color: #8B0000; /* Color de fondo tipo Discord */
+
+    color: rgb(0, 0, 0);
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    border-radius: 8px;
+
+    transition: all 0.3s ease; /* Transición suave */
+
+    cursor: pointer; /* Cambia el cursor a "mano" */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+
+}
+
+
+
 .button:hover {
-  background-color: #FFC0CB;
-  transform: translateY(-6px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+
+    background-color: #FF6347; /* Rojo más brillante al hacer hover */
+
+    transform: translateY(-6px); /* Efecto más fuerte de deslizamiento hacia arriba */
+
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6); /* Sombra más fuerte */
+
 }
 
-/* ... (resto del código) */
+
+
+.button:active {
+
+    transform: translateY(2px); /* Efecto al hacer clic */
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra más sutil al hacer clic */
+
+}
+
+
+
+/* Pie de página */
+
+footer {
+
+    margin-top: 30px;
+
+    font-size: 0.9em;
+
+    color: #ccc;
+
+    text-align: center;
+
+}
+
+
+
+/* Responsividad */
+
+@media (max-width: 768px) {
+
+    .main-title {
+
+        font-size: 2em; /* Reducir el tamaño del título en pantallas más pequeñas */
+
+    }
+
+
+
+    .profile-img {
+
+        width: 120px;
+
+        height: 120px;
+
+    }
+
+
+
+    .button {
+
+        font-size: 16px;
+
+        padding: 12px;
+
+    }
+
+}
+
+
+
+Mostrar versiones
+
