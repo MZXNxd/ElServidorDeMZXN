@@ -109,7 +109,7 @@ body::before {
 .button {
     display: inline-block;
     padding: 15px;
-    background-color: #8B0000; /* Color de fondo tipo Discord */
+    background-color: #F70071; /* Color de fondo tipo Discord */
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
@@ -120,7 +120,7 @@ body::before {
 }
 
 .button:hover {
-    background-color: #FF6347; /* Rojo más brillante al hacer hover */
+    background-color: #FF96C5; /* Rojo más brillante al hacer hover */
     transform: translateY(-6px); /* Efecto más fuerte de deslizamiento hacia arriba */
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6); /* Sombra más fuerte */
 }
