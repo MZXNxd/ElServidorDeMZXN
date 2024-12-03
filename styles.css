@@ -1,27 +1,26 @@
-/* Variables CSS */
-:root {
-  --primary-color: #FF6347;
-  --secondary-color: #8B0000;
-  --font-family: Arial, sans-serif;
-}
-
-/* Estilo general */
-body {
-  /* ... */
-  font-family: var(--font-family);
-  /* ... */
-}
+/* ... (resto del código) */
 
 /* Título principal */
 .main-title {
-  /* ... */
-  color: var(--primary-color);
-  /* ... */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #FFC0CB; /* Color rosa */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 192, 203, 0.8), 0 0 10px rgba(255, 192, 203, 0.8);
+  border: 2px solid #FFC0CB;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* Botones */
-.button {
-  /* ... */
-  background-color: var(--secondary-color);
-  /* ... */
+/* Botón al hacer hover */
+.button:hover {
+  background-color: #FFC0CB;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
 }
+
+/* ... (resto del código) */
