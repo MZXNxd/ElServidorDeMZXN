@@ -59,7 +59,7 @@ body::before {
     letter-spacing: 2px; /* Espaciado entre letras */
     text-transform: uppercase;
     font-weight: bold;
-    text-shadow: 0 0 8px rgba(255, 99, 71, 0.8), 0 0 10px rgba(255, 99, 71, 0.8); /* Sombra luminosa */
+    text-shadow: 0 0 8px rgba(255, 192, 203), 0 0 10px rgba(255, 0, 255); /* Sombra luminosa */
     border: 2px solid #FF6347; /* Borde que ilumina el título */
     padding: 10px;
     border-radius: 8px; /* Bordes redondeados */
