@@ -77,7 +77,7 @@ body::before {
     height: 150px;
     border-radius: 50%; /* Imagen circular */
     object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
-    border: 5px solid rgb(255, 49, 141); /* Borde alrededor de la imagen */
+    border: 5px solid rgb(255, 192, 203); /* Borde alrededor de la imagen */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Sombra sutil alrededor de la imagen */
     transition: transform 0.3s ease; /* Animación de transformación */
 }
