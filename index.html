@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <button id="playAudio">Click</button>
+
+    <audio id="backgroundMusic" loop="">
+        <source src="Cancion2.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
   <div class="container">
     <h1 class="main-title">Servidor De MZXN</h1>
 
@@ -25,5 +32,17 @@
       <p>&copy; 2024 MZXN. Un tio chill de cojones</p>
     </footer>
   </div>
-</body>
-</html>
+
+ <script>
+        document.getElementById('playAudio').addEventListener('click', function () {
+            const audio = document.getElementById('backgroundMusic');
+            audio.play(); // Reproducir la música
+            this.style.opacity = '0'; // Hace que el botón desaparezca suavemente
+            setTimeout(() => {
+                this.style.display = 'none'; // Elimina el botón del flujo después de desaparecer
+            }, 300); // Espera 300ms para que la transición termine
+        });
+    </script>
+
+
+</body></html>
