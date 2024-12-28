@@ -32,6 +32,32 @@ body::before {
     z-index: -1; /* Asegura que el overlay no tape los elementos */
 }
 
+/* Botón para activar música */
+#playAudio {
+    position: fixed; /* Ocupa toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Centra el texto */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro semitransparente */
+    color: #fff;
+    font-size: 2rem; /* Texto grande */
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté encima de todo */
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Efecto de brillo en el texto */
+    transition: all 0.3s ease; /* Suaviza el cambio al desaparecer */
+}
+
+#playAudio:hover {
+    background: rgba(0, 0, 0, 0.8); /* Más oscuro al pasar el mouse */
+}
+
+
 /* Contenedor principal */
 .container {
     max-width: 600px; /* Ancho máximo de la página */
