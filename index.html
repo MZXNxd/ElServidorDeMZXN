@@ -36,16 +36,23 @@
   </div>
 
   <script>
-    document.getElementById('playAudio').addEventListener('click', function () {
-        const audio = document.getElementById('backgroundMusic');
-        audio.volume = 1;
-        audio.play();
-        this.style.opacity = '0';
-        setTimeout(() => {
-            this.style.display = 'none';
-        }, 300);
-    });
+      document.getElementById('playAudio').addEventListener('click', function () {
+          const audio = document.getElementById('backgroundMusic');
+          
+          // Ajustar el volumen al máximo (100%)
+          audio.volume = 1;
+
+          // Reproducir el audio
+          audio.play();
+
+          // Ocultar el botón después de hacer clic
+          this.style.opacity = '0';
+          setTimeout(() => {
+              this.style.display = 'none';
+          }, 300);
+      });
   </script>
   <!-- (1224896909085249617) Gladius27 X MZXN (1322547282226188311) -->
+
 </body>
 </html>
