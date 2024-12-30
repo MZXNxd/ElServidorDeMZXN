@@ -1,4 +1,10 @@
-body, html {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -54,6 +60,22 @@ body::before {
     background: rgba(0, 0, 0, 0.8);
 }
 
+#playAudio:focus {
+    outline: none;
+}
+
+#playAudio.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-out;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
 .container {
     max-width: 600px;
     width: 100%;
@@ -64,25 +86,45 @@ body::before {
     text-align: center;
 }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
 .main-title {
     font-size: 2.5em;
     margin-bottom: 20px;
     margin-top: 30px;
     color: #fff;
-    text-shadow: 2px 2px 0px #000000, -2px -2px 0px #FF00FF; /* Cambié el color del glitch a rosado */
+    text-shadow: 2px 2px 0px #444444, -2px -2px 0px #FF00FF;
     position: relative;
     animation: glitch 1s infinite;
 }
 
-/* Quité el recuadro al pasar el mouse */
 .main-title:hover {
     transform: scale(1.05);
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px 0px #444444, -2px -2px 0px #FF00FF;
+        transform: translate(0, 0);
+    }
+    20% {
+        text-shadow: 4px -4px 0px #444444, -4px 4px 0px #FF00FF;
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        text-shadow: -4px 4px 0px #444444, 4px -4px 0px #FF00FF;
+        transform: translate(2px, -2px);
+    }
+    60% {
+        text-shadow: 4px 4px 0px #444444, -4px -4px 0px #FF00FF;
+        transform: translate(-1px, 1px);
+    }
+    80% {
+        text-shadow: -2px -2px 0px #444444, 2px 2px 0px #FF00FF;
+        transform: translate(1px, -1px);
+    }
+    100% {
+        text-shadow: 2px 2px 0px #444444, -2px -2px 0px #FF00FF;
+        transform: translate(0, 0);
+    }
 }
 
 .profile-container {
@@ -95,25 +137,13 @@ body::before {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid rgb(255, 192, 203);
+    border: 5px solid #FF007F;
     transition: transform 0.3s ease;
-    box-shadow: none;
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
 }
 
 .profile-img:hover {
     transform: scale(1.05);
-}
-
-.profile-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0);
-    border-radius: 50%;
-    z-index: -1;
 }
 
 .buttons-container {
@@ -166,33 +196,6 @@ footer {
     .button {
         font-size: 16px;
         padding: 12px;
-    }
-}
-
-@keyframes glitch {
-    0% {
-        text-shadow: 2px 2px 0px #444444, -2px -2px 0px #FF00FF; /* Cambié el negro por un gris oscuro (#444444) */
-        transform: translate(0, 0);
-    }
-    20% {
-        text-shadow: 4px -4px 0px #444444, -4px 4px 0px #FF00FF; /* Cambié el negro por un gris oscuro (#444444) */
-        transform: translate(-2px, 2px);
-    }
-    40% {
-        text-shadow: -4px 4px 0px #444444, 4px -4px 0px #FF00FF; /* Cambié el negro por un gris oscuro (#444444) */
-        transform: translate(2px, -2px);
-    }
-    60% {
-        text-shadow: 4px 4px 0px #444444, -4px -4px 0px #FF00FF; /* Cambié el negro por un gris oscuro (#444444) */
-        transform: translate(-1px, 1px);
-    }
-    80% {
-        text-shadow: -2px -2px 0px #444444, 2px 2px 0px #FF00FF; /* Cambié el negro por un gris oscuro (#444444) */
-        transform: translate(1px, -1px);
-    }
-    100% {
-        text-shadow: 2px 2px 0px #444444, -2px -2px 0px #FF00FF; /* Cambié el negro por un gris oscuro (#444444) */
-        transform: translate(0, 0);
     }
 }
 
