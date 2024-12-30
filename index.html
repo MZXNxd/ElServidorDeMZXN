@@ -38,14 +38,7 @@
   <script>
       document.getElementById('playAudio').addEventListener('click', function () {
           const audio = document.getElementById('backgroundMusic');
-          
-          // Ajustar el volumen al máximo (100%)
-          audio.volume = 1;
-
-          // Reproducir el audio
           audio.play();
-
-          // Ocultar el botón después de hacer clic
           this.style.opacity = '0';
           setTimeout(() => {
               this.style.display = 'none';
