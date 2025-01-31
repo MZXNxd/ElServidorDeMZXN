@@ -91,7 +91,7 @@ body::before {
     margin-bottom: 20px;
     margin-top: 30px;
     color: #fff;
-    text-shadow: 2px 2px 0px #444444, -2px -2px 0px #FF00FF;
+    text-shadow: 2px 2px 0px #444444, -2px -2px 0px #55007d;
     position: relative;
     animation: glitch 1s infinite;
 }
@@ -102,27 +102,27 @@ body::before {
 
 @keyframes glitch {
     0% {
-        text-shadow: 2px 2px 0px #444444, -2px -2px 0px #FF00FF;
+        text-shadow: 2px 2px 0px #444444, -2px -2px 0px #55007d;
         transform: translate(0, 0);
     }
     20% {
-        text-shadow: 4px -4px 0px #444444, -4px 4px 0px #FF00FF;
+        text-shadow: 4px -4px 0px #444444, -4px 4px 0px #55007d;
         transform: translate(-2px, 2px);
     }
     40% {
-        text-shadow: -4px 4px 0px #444444, 4px -4px 0px #FF00FF;
+        text-shadow: -4px 4px 0px #444444, 4px -4px 0px #55007d;
         transform: translate(2px, -2px);
     }
     60% {
-        text-shadow: 4px 4px 0px #444444, -4px -4px 0px #FF00FF;
+        text-shadow: 4px 4px 0px #444444, -4px -4px 0px #55007d;
         transform: translate(-1px, 1px);
     }
     80% {
-        text-shadow: -2px -2px 0px #444444, 2px 2px 0px #FF00FF;
+        text-shadow: -2px -2px 0px #444444, 2px 2px 0px #55007d;
         transform: translate(1px, -1px);
     }
     100% {
-        text-shadow: 2px 2px 0px #444444, -2px -2px 0px #FF00FF;
+        text-shadow: 2px 2px 0px #444444, -2px -2px 0px #55007d;
         transform: translate(0, 0);
     }
 }
@@ -137,9 +137,9 @@ body::before {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #FF007F;
+    border: 5px solid #55007d;
     transition: transform 0.3s ease;
-    box-shadow: 0 0 15px rgba(255, 0, 127, 0.7);
+    box-shadow: 0 0 15px rgba(73, 3, 178);
 }
 
 .profile-img:hover {
@@ -155,7 +155,7 @@ body::before {
 .button {
     display: inline-block;
     padding: 15px;
-    background-color: #F70071;
+    background-color: #55007d;
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 18px;
@@ -166,7 +166,7 @@ body::before {
 }
 
 .button:hover {
-    background-color: #FF96C5;
+    background-color: #db01db;
     transform: translateY(-6px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
 }
